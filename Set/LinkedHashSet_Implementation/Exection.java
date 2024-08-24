@@ -20,7 +20,7 @@ public class Exection {
         GeneralTicket gt10 = new GeneralTicket(11, "Second Class", "Coimbatore to Madurai", 60);
 
 
-
+        generalTicketSet.add(null);
         generalTicketSet.add(gt);
         generalTicketSet.add(gt1);
         generalTicketSet.add(gt2);
@@ -39,14 +39,14 @@ public class Exection {
         gt10.setDescription("Hello");
         Iterator<GeneralTicket> itr = generalTicketSet.iterator();
 
-//        while (itr.hasNext()) {
-//            GeneralTicket gte = itr.next();
-//            System.out.println(gte.getTitle() + "," + gte.getDescription() + "," + gte.getPrice());
-//
-//            if(gte.getDescription().equals("Hello")){
-//                gte.setDescription("Hello0000");
+        while (itr.hasNext()) {
+            GeneralTicket gte = itr.next();
+            if (gte != null) {
+                System.out.println(gte.getTitle() + "," + gte.getDescription() + "," + gte.getPrice());
+            }
+//            if (gte.getDescription().equals("Hello")) {
+//                gte.setDescription("adasdasd");
 //            }
-//        }
-
+        }
     }
 }

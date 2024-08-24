@@ -1,5 +1,8 @@
 package Set.TreeSet;
 
+
+import java.util.Comparator;
+
 public class GeneralTicket2 implements Comparable<GeneralTicket2> {
     private int id;
     private String title;
@@ -56,6 +59,13 @@ public class GeneralTicket2 implements Comparable<GeneralTicket2> {
             return 1;
         } else {
             return this.title.compareTo(o.title);
+        }
+    }
+    public class general implements Comparator {
+
+        @Override
+        public int compare(Object o1, Object o2) {
+            return 0;
         }
     }
 }

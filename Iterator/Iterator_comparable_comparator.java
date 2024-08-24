@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Iteratoruse {
+public class Iterator_comparable_comparator {
     public static void main(String[] args) {
         int a;
         List<Integer> list = new ArrayList<Integer>();
