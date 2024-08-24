@@ -1,4 +1,4 @@
-package OOPS.Books_ArrList;
+package LinkedList_Methods.Books_ArrList;
 
 import java.util.ArrayList;
 import java.util.List;

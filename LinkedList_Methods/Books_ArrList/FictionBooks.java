@@ -1,4 +1,4 @@
-package OOPS.Books_ArrList;
+package LinkedList_Methods.Books_ArrList;
 
 public class FictionBooks implements BookCollection{
     @Override
