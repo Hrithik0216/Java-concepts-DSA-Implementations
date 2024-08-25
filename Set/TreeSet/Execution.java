@@ -1,12 +1,13 @@
 package Set.TreeSet;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Execution {
     public static void main(String[] args) {
-        Set<GeneralTicket2> generalTicketSet = new TreeSet<>();
+        Set<GeneralTicket2> generalTicketSet = new TreeSet<>(new GeneralTicket2.TicketComparator());
         GeneralTicket2 gt = new GeneralTicket2(1, "Sleeper", "Chennai to mumbai", 55);
         GeneralTicket2 gt1 = new GeneralTicket2(2, "AC", "Delhi to Kolkata", 100);
         GeneralTicket2 gt2 = new GeneralTicket2(3, "Sleeper", "Bangalore to Hyderabad", 75);
@@ -39,12 +40,11 @@ public class Execution {
 
         boolean check = generalTicketSet.contains(gt10);
 
-
         gt10.setDescription("Hello");
         Iterator<GeneralTicket2> itr = generalTicketSet.iterator();
 
         for (GeneralTicket2 i : generalTicketSet) {
-            System.out.println(i.getId() + ", " + i.getTitle());
+            System.out.println(i.getPrice()+", "+i.getId() + ", " + i.getTitle());
         }
 //        while (itr.hasNext()) {
 //            GeneralTicket gte = itr.next();

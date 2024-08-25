@@ -3,7 +3,24 @@ package Set.TreeSet;
 
 import java.util.Comparator;
 
-public class GeneralTicket2 implements Comparable<GeneralTicket2> {
+public class GeneralTicket2 {
+   public static class TicketComparator implements Comparator<GeneralTicket2> {
+        @Override
+        public int compare(GeneralTicket2 t1, GeneralTicket2 t2) {
+//            public int compare(GeneralTicket2 t1, GeneralTicket2 t2) {
+//                return Integer.compare(t1.getPrice(), t2.getPrice());
+//            }
+            //The above can be used if only one parameter to compare of integer tpe
+            if (t1.getPrice() > t2.getPrice()) {
+                return 1;
+            } else if (t1.getPrice() < t2.getPrice()) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+    }
+
     private int id;
     private String title;
     private String description;
@@ -46,26 +63,5 @@ public class GeneralTicket2 implements Comparable<GeneralTicket2> {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    @Override
-    public int compareTo(GeneralTicket2 o) {
-        int idCompare = Integer.compare(this.id, o.id);
-        if (idCompare == 0) {
-            return idCompare;
-        } else if (idCompare == -1) {
-            return -1;
-        } else if (idCompare == 1) {
-            return 1;
-        } else {
-            return this.title.compareTo(o.title);
-        }
-    }
-    public class general implements Comparator {
-
-        @Override
-        public int compare(Object o1, Object o2) {
-            return 0;
-        }
     }
 }
