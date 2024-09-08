@@ -1,4 +1,4 @@
-package Linked_List_Implementations;
+package CustomLinkedList;
 
 public class LL {
     Node head;

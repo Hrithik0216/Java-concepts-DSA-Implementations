@@ -1,4 +1,4 @@
-package Linked_List_Implementations;
+package CustomLinkedList;
 
 public class Execute {
     public static void main(String[] args) {
