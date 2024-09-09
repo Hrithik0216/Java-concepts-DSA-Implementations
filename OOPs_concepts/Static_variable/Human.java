@@ -10,10 +10,7 @@ public class Human {
         return age;
     }
 
-    static void printHlello(){
-        System.out.println("Hlello");
-        this.age
-    }
+
     public Human(String name, int salary, int age) {
         Name = name;
         this.salary = salary;

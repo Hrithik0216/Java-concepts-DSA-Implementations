@@ -1,6 +1,8 @@
 package CustomArrayList;
 
-public class CustomGenericsArrayList<T> {
+import java.util.Iterator;
+
+public class CustomGenericsArrayList<T> implements Iterable<T> {
     T[] data;
     static final int DEFAULT_SIZE = 10;
     int ptr = -1;
@@ -61,4 +63,20 @@ public class CustomGenericsArrayList<T> {
         data = temp;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return index <= ptr;
+            }
+
+            @Override
+            public T next() {
+                return data[index++];
+            }
+        };
+    }
 }
