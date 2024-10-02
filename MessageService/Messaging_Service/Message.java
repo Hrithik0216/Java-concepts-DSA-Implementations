@@ -1,10 +1,15 @@
 package MessageService.Messaging_Service;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Message {
     private User sender;
     private User recipient;
     private String message;
     private String status;
+
+
 
     public String getStatus() {
         return status;
